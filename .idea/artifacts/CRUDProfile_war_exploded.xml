@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="CRUDProfile:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/CRUDProfile_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="CRUDProfile" />
+          <element id="jpa-descriptors" facet="CRUDProfile/jpa/JPA" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-5.1.44-bin" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="CRUDProfile/web/Web" />
+    </root>
+  </artifact>
+</component>
