@@ -43,7 +43,7 @@
                 <select name="gender" class="form-control" required>
                     <option value="" disabled selected>Gender</option>
                     <option value="male">Male</option>
-                    <option value="femal">Female</option>
+                    <option value="female">Female</option>
                 </select>
                 <i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
             </div>

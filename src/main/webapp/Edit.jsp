@@ -49,7 +49,7 @@
             <div class="form-wrapper">
                 <select name="gender" class="form-control" value="<c:out value="${st.gender}"/>" required>
                     <option value="male">Male</option>
-                    <option value="femal">Female</option>
+                    <option value="female">Female</option>
                 </select>
                 <i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
             </div>

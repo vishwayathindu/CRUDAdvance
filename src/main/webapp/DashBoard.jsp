@@ -67,11 +67,16 @@
                     <table>
                         <thead>
                         <tr class="row100 head" style="cursor: pointer">
-                            <th class="cell100 column1" onclick="sortTable(0)">User Name</th>
-                            <th class="cell100 column2" onclick="sortTable(1)">ID</th>
-                            <th class="cell100 column3" onclick="sortTable(2)">NIC</th>
-                            <th class="cell100 column4" onclick="sortTable(3)">Mobile Number</th>
-                            <th class="cell100 column5" onclick="sortTable(4)">Gender</th>
+                            <th class="cell100 column1" onclick="sortTable(0)">User Name<i
+                                    class="zmdi zmdi-unfold-more"></i></th>
+                            <th class="cell100 column2" onclick="sortTable(1)">ID<i
+                                    class="zmdi zmdi-unfold-more"></i></th>
+                            <th class="cell100 column3" onclick="sortTable(2)">NIC<i
+                                    class="zmdi zmdi-unfold-more"></i></th>
+                            <th class="cell100 column4" onclick="sortTable(3)">Mobile Number<i
+                                    class="zmdi zmdi-unfold-more"></i></th>
+                            <th class="cell100 column5" onclick="sortTable(4)">Gender<i
+                                    class="zmdi zmdi-unfold-more"></i></th>
                             <th class="cell100 column6">Edit/Delete</th>
                         </tr>
                         </thead>
@@ -84,8 +89,8 @@
                                 <tr>
                                     <td colspan="5">
                                         <form action="SearchServlet" method="get">
-                                            <label style="color: white">Search by Student Name:</label>
-                                            <input type="text" name="searchValue" placeholder="Name or NIC"
+                                            <label style="color: white">Search user:</label>
+                                            <input type="text" name="searchValue" placeholder="Name,NIC,mobile number or gender "
                                                    class="form-control" value="<c:out value="${userName}"/>">
                                             <button type="submit" name="searchUser"
                                                     class="btn btn-primary btn-block btn-large">Search<i

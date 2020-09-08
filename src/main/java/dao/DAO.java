@@ -258,7 +258,7 @@ public class DAO {
         List<Model> user = new ArrayList<>();
         Connection connection = null;
         PreparedStatement preparedStatement = null;
-        final String sql = "select * from usertable where (userName  like  '" + Name + "%' or nIC like  '" + Name + "%') and Id !=" + id + "";
+        final String sql = "select * from usertable where (userName  like  '" + Name + "%' or nic like  '" + Name + "%' or mobileNumber like  '" + Name + "%'or gender like  '" + Name + "%') and Id !=" + id + "";
         //System.out.printf("searched student name is"+stName);
 
         try {

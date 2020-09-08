@@ -14,7 +14,7 @@
 }
 
 .capbox-inner {
-    font: bold 12px arial, sans-serif;
+    font: bold 10px arial, sans-serif;
     color: #000000;
     background-color: #E3E3E3;
     margin: 0px auto 0px auto;
@@ -26,7 +26,7 @@
 
 #CaptchaDiv {
     color: #000000;
-    font: normal 25px Impact, Charcoal, arial, sans-serif;
+    font: normal 20px Impact, Charcoal, arial, sans-serif;
     font-style: italic;
     text-align: center;
     vertical-align: middle;
