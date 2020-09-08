@@ -92,7 +92,7 @@
                                             <input type="text" name="searchValue" placeholder="Name,NIC,mobile number or gender "
                                                    class="form-control" value="<c:out value="${userName}"/>">
                                             <button type="submit" name="searchUser"
-                                                    class="btn btn-primary btn-block btn-large">Search<i
+                                                     class="btn btn-primary btn-block btn-large">Search<i
                                                     class="zmdi zmdi-search"></i></button>
                                         </form>
                                     </td>
@@ -169,7 +169,8 @@
 <%--            pagination page numbers--%>
                 <div class="">
                     <table>
-                        <th class="" colspan="6">
+                        <th></th>
+                        <th class="" >
                             <table cellpadding="5" cellspacing="5">
                                 <tr>
                                     <c:forEach begin="1" end="${noOfPages}" var="i">
@@ -186,6 +187,7 @@
                                 </tr>
                             </table>
                         </th>
+                        <th></th>
                     </table>
                 </div>
 
