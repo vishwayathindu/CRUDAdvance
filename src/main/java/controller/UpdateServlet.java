@@ -5,7 +5,6 @@ import model.Model;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,11 +18,11 @@ import java.util.regex.Pattern;
 public class UpdateServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        int ID= Integer.parseInt(request.getParameter("ID"));
-        String UserName= request.getParameter("UserName");
-        String nic= request.getParameter("nic");
-        String mobileNumber= request.getParameter("mobileNumber");
-        String gender= request.getParameter("gender");
+        int ID = Integer.parseInt(request.getParameter("ID"));
+        String UserName = request.getParameter("UserName");
+        String nic = request.getParameter("nic");
+        String mobileNumber = request.getParameter("mobileNumber");
+        String gender = request.getParameter("gender");
 
         // matching nic
         Pattern patt = Pattern.compile("^([0-9]{9}[x|X|v|V]|[0-9]{12})$");
@@ -62,7 +61,7 @@ public class UpdateServlet extends HttpServlet {
             try {
                 int results = DAO.Updated(s1);
                 System.out.printf("studenent update working results" + results);
-                response.sendRedirect(request.getContextPath() + "/DashBoardServlet");
+                response.sendRedirect(request.getContextPath() + "/DashBoardServlet?pageId=1&sort=id");
 
             } catch (SQLException e) {
                 e.printStackTrace();

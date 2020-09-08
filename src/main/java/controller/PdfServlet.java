@@ -8,13 +8,11 @@ import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,14 +21,15 @@ import java.util.logging.Logger;
 
 //@WebServlet(name = "PdfServlet")
 public class PdfServlet extends HttpServlet {
-    private String DOWNLOAD_FILE_NAME = "postReport.pdf"; //file name of the downloadable file
-    private String FILE_TYPE = "application/pdf"; //file type of the file(pdf)
+    private final String DOWNLOAD_FILE_NAME = "postReport.pdf"; //file name of the downloadable file
+    private final String FILE_TYPE = "application/pdf"; //file type of the file(pdf)
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Model> postData ;
+        List<Model> postData;
         String reportPath;
         OutputStream outputStream = null;
         JasperReport jasperReport;
@@ -54,7 +53,7 @@ public class PdfServlet extends HttpServlet {
 
             //byteStream
             byte[] byteStream;
-            byteStream = JasperRunManager.runReportToPdf(jasperReport,reportParameters, reportSource);
+            byteStream = JasperRunManager.runReportToPdf(jasperReport, reportParameters, reportSource);
 
             //response
             response.setHeader("Content-Disposition", "attachement; filename=" + DOWNLOAD_FILE_NAME);
@@ -71,7 +70,7 @@ public class PdfServlet extends HttpServlet {
             Logger.getLogger(PdfServlet.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception e) {
             e.printStackTrace();
-        }finally{
+        } finally {
             try {
                 outputStream.close();
             } catch (IOException ex) {

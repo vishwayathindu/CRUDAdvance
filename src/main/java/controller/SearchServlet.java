@@ -5,7 +5,6 @@ import model.Model;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -27,12 +26,12 @@ public class SearchServlet extends HttpServlet {
         int id = (int) session.getAttribute("Id");
         List<Model> listUser = null;
 
-        if (userName =="") {
+        if (userName == "") {
             response.sendRedirect(request.getContextPath() + "/DashBoardServlet?pageId=1&sort=id");
         } else {
             try {
 
-                listUser = dao.search(userName,id);
+                listUser = dao.search(userName, id);
                 request.setAttribute("listUser", listUser);
                 request.setAttribute("userName", userName);
                 RequestDispatcher dispatcher = request.getRequestDispatcher("DashBoard.jsp");

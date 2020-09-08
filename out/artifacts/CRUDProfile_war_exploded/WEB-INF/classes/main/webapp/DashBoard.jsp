@@ -66,7 +66,7 @@
                 <div class="table100-head">
                     <table>
                         <thead>
-                        <tr class="row100 head">
+                        <tr class="row100 head" style="cursor: pointer">
                             <th class="cell100 column1" onclick="sortTable(0)">User Name</th>
                             <th class="cell100 column2" onclick="sortTable(1)">ID</th>
                             <th class="cell100 column3" onclick="sortTable(2)">NIC</th>
@@ -86,7 +86,7 @@
                                         <form action="SearchServlet" method="get">
                                             <label style="color: white" >Search by Student Name:</label>
                                             <input type="text" name="searchValue" placeholder="Name or NIC" class="form-control" value="<c:out value="${userName}"/>">
-                                            <button type="submit" name="searchUser" class="btn btn-primary btn-block btn-large">Search</button>
+                                            <button type="submit" name="searchUser" class="btn btn-primary btn-block btn-large">Search<i class="zmdi zmdi-search"></i></button>
                                         </form>
                                     </td>
                                 </tr>
@@ -155,18 +155,18 @@
                     </table>
                 </div>
 
-                <div class="table100-body js-pscroll">
+                <div class="">
                     <table>
-                        <th class="cell100 column1" colspan="6">
+                        <th class="" colspan="6">
                             <table cellpadding="5" cellspacing="5">
                                 <tr>
                                     <c:forEach begin="1" end="${noOfPages}" var="i">
                                         <c:choose>
                                             <c:when test="${currentPage eq i}">
-                                                <td class="cell100 column1" style="color: white">${i}</td>
+                                                <td class="" style="color: white">${i}</td>
                                             </c:when>
                                             <c:otherwise>
-                                                <td class="cell100 column1" ><a href="DashBoardServlet?pageId=${i}&sort=${columnName}" style="color: white">${i}</a></td>
+                                                <td class="" ><a href="DashBoardServlet?pageId=${i}&sort=${columnName}" style="color: white">${i}</a></td>
                                             </c:otherwise>
                                         </c:choose>
                                     </c:forEach>

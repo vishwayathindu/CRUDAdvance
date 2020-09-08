@@ -54,19 +54,19 @@
 %>
 
 
-    <form action="LogOutServlet">
-        <button style="position:absolute; right: 10px">Log Out
+<form action="LogOutServlet">
+    <button style="position:absolute; right: 10px">Log Out
         <i class="zmdi zmdi-arrow-right"></i>
     </button>
-    </form>
-    <div class="limiter" style="position:absolute; top:100px">
+</form>
+<div class="limiter" style="position:absolute; top:100px">
     <div class="container-table100">
         <div class="wrap-table100">
             <div class="table100 ver1 m-b-110">
                 <div class="table100-head">
                     <table>
                         <thead>
-                        <tr class="row100 head">
+                        <tr class="row100 head" style="cursor: pointer">
                             <th class="cell100 column1" onclick="sortTable(0)">User Name</th>
                             <th class="cell100 column2" onclick="sortTable(1)">ID</th>
                             <th class="cell100 column3" onclick="sortTable(2)">NIC</th>
@@ -84,9 +84,12 @@
                                 <tr>
                                     <td colspan="5">
                                         <form action="SearchServlet" method="get">
-                                            <label style="color: white" >Search by Student Name:</label>
-                                            <input type="text" name="searchValue" placeholder="Name or NIC" class="form-control" value="<c:out value="${userName}"/>">
-                                            <button type="submit" name="searchUser" class="btn btn-primary btn-block btn-large">Search</button>
+                                            <label style="color: white">Search by Student Name:</label>
+                                            <input type="text" name="searchValue" placeholder="Name or NIC"
+                                                   class="form-control" value="<c:out value="${userName}"/>">
+                                            <button type="submit" name="searchUser"
+                                                    class="btn btn-primary btn-block btn-large">Search<i
+                                                    class="zmdi zmdi-search"></i></button>
                                         </form>
                                     </td>
                                 </tr>
@@ -106,8 +109,12 @@
                                 <td class="cell100 column4"><c:out value="${listOfAcc.mobileNumber}"/></td>
                                 <td class="cell100 column5"><c:out value="${listOfAcc.gender}"/></td>
                                 <td class="cell100 column6">
-                                    <a class="btn btn-sm btn-success" href="EditServlet?Id=<c:out value="${listOfAcc.id}"/>"><i class="zmdi zmdi-edit"></i>Edit</a><br/><br/>
-                                    <a class="btn btn-sm btn-danger" href="DeleteServlet?Id=<c:out value="${listOfAcc.id}"/>"><i class="zmdi zmdi-delete"></i>Delete</a>
+                                    <a class="btn btn-sm btn-success"
+                                       href="EditServlet?Id=<c:out value="${listOfAcc.id}"/>"><i
+                                            class="zmdi zmdi-edit"></i>Edit</a><br/><br/>
+                                    <a class="btn btn-sm btn-danger"
+                                       href="DeleteServlet?Id=<c:out value="${listOfAcc.id}"/>"><i
+                                            class="zmdi zmdi-delete"></i>Delete</a>
                                 </td>
 
                             </tr>
@@ -123,12 +130,12 @@
                             <table cellpadding="5" cellspacing="5">
                                 <tr>
                                     <td>
-                                    <form action="PdfServlet">
-                                        <button>PDF Download
-                                            <i class="zmdi zmdi-arrow-right"></i>
-                                        </button>
+                                        <form action="PdfServlet">
+                                            <button>PDF Download
+                                                <i class="zmdi zmdi-arrow-right"></i>
+                                            </button>
 
-                                    </form>
+                                        </form>
                                     <td>
                                     <td>
                                         <form action="ExcelServlet">
@@ -148,25 +155,25 @@
                                     </td>
 
 
-
                                 </tr>
                             </table>
                         </th>
                     </table>
                 </div>
 
-                <div class="table100-body js-pscroll">
+                <div class="">
                     <table>
-                        <th class="cell100 column1" colspan="6">
+                        <th class="" colspan="6">
                             <table cellpadding="5" cellspacing="5">
                                 <tr>
                                     <c:forEach begin="1" end="${noOfPages}" var="i">
                                         <c:choose>
                                             <c:when test="${currentPage eq i}">
-                                                <td class="cell100 column1" style="color: white">${i}</td>
+                                                <td class="" style="color: white">${i}</td>
                                             </c:when>
                                             <c:otherwise>
-                                                <td class="cell100 column1" ><a href="DashBoardServlet?pageId=${i}&sort=${columnName}" style="color: white">${i}</a></td>
+                                                <td class=""><a href="DashBoardServlet?pageId=${i}&sort=${columnName}"
+                                                                style="color: white">${i}</a></td>
                                             </c:otherwise>
                                         </c:choose>
                                     </c:forEach>
@@ -210,7 +217,7 @@
                 if (dir == "asc") {
                     if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
                         //if so, mark as a switch and break the loop:
-                        shouldSwitch= true;
+                        shouldSwitch = true;
                         break;
                     }
                 } else if (dir == "desc") {
@@ -227,7 +234,7 @@
                 rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
                 switching = true;
                 //Each time a switch is done, increase this count by 1:
-                switchcount ++;
+                switchcount++;
             } else {
                 /*If no switching has been done AND the direction is "asc",
                 set the direction to "desc" and run the while loop again.*/

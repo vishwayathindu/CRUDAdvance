@@ -24,18 +24,19 @@ import java.util.logging.Logger;
 
 @WebServlet(name = "ExcelServlet")
 public class ExcelServlet extends HttpServlet {
-    private String DOWNLOAD_FILE_NAME = "ReportExcel.xls";
-    private String FILE_TYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+    private final String DOWNLOAD_FILE_NAME = "Report.xlsx";
+    private final String FILE_TYPE = "application/vnd.ms-excel";
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        genExcel(request,response);
+        genExcel(request, response);
 
     }
 
-    public void genExcel(HttpServletRequest request, HttpServletResponse response){
+    public void genExcel(HttpServletRequest request, HttpServletResponse response) {
         List<Model> dataList;
         String reportPath;
         OutputStream outputStream;
@@ -58,11 +59,11 @@ public class ExcelServlet extends HttpServlet {
             dataList = jasperData.getAllRecords();
             reportSource = new JRBeanCollectionDataSource(dataList, false);
 
-            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,reportParameters, reportSource);
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, reportParameters, reportSource);
 
 
             outputStream = response.getOutputStream();
-            response.setHeader("Content-Disposition", "attachment; filename=" +DOWNLOAD_FILE_NAME);
+            response.setHeader("Content-Disposition", "attachment; filename=" + DOWNLOAD_FILE_NAME);
             response.setContentType(FILE_TYPE);
             response.setContentLength(4096);
 
@@ -76,9 +77,9 @@ public class ExcelServlet extends HttpServlet {
             exporterXLS.setParameter(JRXlsExporterParameter.OUTPUT_FILE_NAME, DOWNLOAD_FILE_NAME);
             exporterXLS.exportReport();
             outputStream.close();
-        }catch (JRException e){
+        } catch (JRException e) {
             Logger.getLogger(ExcelServlet.class.getName()).log(Level.SEVERE, null, e);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

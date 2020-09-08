@@ -23,7 +23,7 @@ public class RemoveServlet extends HttpServlet {
 
             int result = DAO.delete(st);
             //System.out.printf("user delete servelet executed" + result);
-            response.sendRedirect(request.getContextPath() + "/DashBoardServlet");
+            response.sendRedirect(request.getContextPath() + "/DashBoardServlet?pageId=1&sort=id");
 
         } catch (SQLException e) {
             e.printStackTrace();

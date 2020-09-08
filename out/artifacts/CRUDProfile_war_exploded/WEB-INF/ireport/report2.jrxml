@@ -17,7 +17,7 @@
 	<title>
 		<band height="79" splitType="Stretch">
 			<staticText>
-				<reportElement x="112" y="0" width="300" height="79" uuid="0857d92f-c0da-491a-a6e5-9393c88bfc58"/>
+				<reportElement x="0" y="0" width="555" height="79" uuid="0857d92f-c0da-491a-a6e5-9393c88bfc58"/>
 				<textElement textAlignment="Center">
 					<font size="48"/>
 				</textElement>
@@ -26,10 +26,10 @@
 		</band>
 	</title>
 	<pageHeader>
-		<band height="35" splitType="Stretch"/>
+		<band height="1" splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="22" splitType="Stretch">
+		<band height="20" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="0" width="100" height="20" uuid="d2417e1a-3bf6-4e08-a537-13921d7b5a3d"/>
 				<text><![CDATA[userName]]></text>
@@ -43,17 +43,17 @@
 				<text><![CDATA[nic]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="300" y="0" width="100" height="20" uuid="00714abc-3941-4539-bc95-880b268acd43"/>
+				<reportElement x="300" y="0" width="135" height="20" uuid="00714abc-3941-4539-bc95-880b268acd43"/>
 				<text><![CDATA[mobileNumber]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="400" y="0" width="100" height="20" uuid="9ee5949b-5de8-4e4e-a3d4-0291ea25795d"/>
+				<reportElement x="435" y="0" width="120" height="20" uuid="9ee5949b-5de8-4e4e-a3d4-0291ea25795d"/>
 				<text><![CDATA[gender]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="22" splitType="Stretch">
+		<band height="72" splitType="Stretch">
 			<textField>
 				<reportElement x="0" y="0" width="100" height="20" uuid="c6c4a079-77c7-4e23-a50d-30455d6c2f69"/>
 				<textFieldExpression><![CDATA[$F{userName}]]></textFieldExpression>
@@ -67,11 +67,11 @@
 				<textFieldExpression><![CDATA[$F{nic}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="300" y="0" width="100" height="20" uuid="2887107d-dd89-4aba-a4c4-b09d895023c5"/>
+				<reportElement x="300" y="0" width="135" height="20" uuid="2887107d-dd89-4aba-a4c4-b09d895023c5"/>
 				<textFieldExpression><![CDATA[$F{mobileNumber}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="400" y="0" width="100" height="20" uuid="5140be4b-08a9-4634-97fd-0b811907b760"/>
+				<reportElement x="435" y="0" width="120" height="20" uuid="5140be4b-08a9-4634-97fd-0b811907b760"/>
 				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
 			</textField>
 		</band>

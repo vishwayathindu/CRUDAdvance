@@ -5,7 +5,6 @@ import model.Model;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -36,7 +35,7 @@ public class DashBoardServlet extends HttpServlet {
             pageid = pageid * total + 1;
         }
 
-        if ( id != 0) {
+        if (id != 0) {
             if (!sort.equals("userName")) {
 
                 int noOfRecords = DAO.NoOfRecords();
@@ -75,7 +74,7 @@ public class DashBoardServlet extends HttpServlet {
             }
             RequestDispatcher dispatcher = request.getRequestDispatcher("DashBoard.jsp");
             dispatcher.forward(request, response);
-        }else{
+        } else {
 
             request.getRequestDispatcher("Login.jsp").include(request, response);
 

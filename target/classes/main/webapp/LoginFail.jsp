@@ -9,15 +9,20 @@
 <html>
 <head>
     <title>Login Fail</title>
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="wrapper" style="background-image: url('images/bg-registration-form-2.jpg');">
     <div class="inner">
         <div class="image-holder">
-            <img src="images/registration-form-2.png" alt="">
+            <img src="images/authorization-icon-19.jpg" alt="">
         </div>
-        <form action="#" method="post">
-            <button>Log In
+        <form action="LogOutServlet" method="get">
+            <button>Log In Again
                 <i class="zmdi zmdi-arrow-right"></i>
             </button>
         </form>

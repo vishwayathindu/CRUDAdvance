@@ -5,7 +5,6 @@ import model.Model;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,7 +16,7 @@ import java.sql.SQLException;
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String UserName = request.getParameter("UserName");
-        String  confirmPass = request.getParameter("confirmPass");
+        String confirmPass = request.getParameter("confirmPass");
 
         System.out.println("capture data" + UserName + " " + confirmPass);
 

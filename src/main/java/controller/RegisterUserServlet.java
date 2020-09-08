@@ -5,7 +5,6 @@ import model.Model;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,12 +18,12 @@ import java.util.regex.Pattern;
 public class RegisterUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //Creating user variables
-        String  userName=request.getParameter("UserName");
-        String  nic=request.getParameter("nic");
-        String  mobileNumber=request.getParameter("mobileNumber");
-        String  gender=request.getParameter("gender");
-        String  password=request.getParameter("password");
-        String  conPassword=request.getParameter("confirmPass");
+        String userName = request.getParameter("UserName");
+        String nic = request.getParameter("nic");
+        String mobileNumber = request.getParameter("mobileNumber");
+        String gender = request.getParameter("gender");
+        String password = request.getParameter("password");
+        String conPassword = request.getParameter("confirmPass");
 
         // matching nic
         Pattern patt = Pattern.compile("^([0-9]{9}[x|X|v|V]|[0-9]{12})$");
