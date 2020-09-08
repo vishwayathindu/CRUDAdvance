@@ -49,11 +49,8 @@
     } catch (Exception ex) {
         out.println(ex);
     }
-
-
 %>
-
-
+<%--log out button--%>
 <form action="LogOutServlet">
     <button style="position:absolute; right: 10px">Log Out
         <i class="zmdi zmdi-arrow-right"></i>
@@ -63,6 +60,7 @@
     <div class="container-table100">
         <div class="wrap-table100">
             <div class="table100 ver1 m-b-110">
+<%--            table headings with sort buttons--%>
                 <div class="table100-head">
                     <table>
                         <thead>
@@ -82,6 +80,7 @@
                         </thead>
                     </table>
                 </div>
+<%--            search Button--%>
                 <div class="table100-body js-pscroll">
                     <table>
                         <th class="cell100 column1" colspan="6">
@@ -102,6 +101,7 @@
                         </th>
                     </table>
                 </div>
+<%--            table body --%>
                 <div class="table100-body js-pscroll">
                     <table id="myTable">
                         <tbody>
@@ -129,6 +129,7 @@
                     </table>
 
                 </div>
+<%--            data downloding buttons and upload button--%>
                 <div class="table100-body js-pscroll">
                     <table>
                         <th class="cell100 column1" colspan="6">
@@ -165,7 +166,7 @@
                         </th>
                     </table>
                 </div>
-
+<%--            pagination page numbers--%>
                 <div class="">
                     <table>
                         <th class="" colspan="6">
@@ -189,12 +190,10 @@
                 </div>
 
             </div>
-
-
         </div>
     </div>
 </div>
-
+<%--sorting function --%>
 <script>
     function sortTable(n) {
         var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;

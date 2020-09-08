@@ -28,11 +28,13 @@
                 <i class="zmdi zmdi-account"></i>
             </div>
             <div class="form-wrapper">
+                <label>use Srilankan NIC ex:-972661627V or 200009221111</label>
                 <input type="text" placeholder="NIC" class="form-control" name="nic" minlength="10" maxlength="12"
                        pattern="^([0-9]{9}[x|X|v|V]|[0-9]{12})$" required>
                 <i class="zmdi zmdi-card"></i>
             </div>
             <div class="form-wrapper">
+                <label>use Srilankan Telephone numbers</label>
                 <input type="text" placeholder="Mobile Number" class="form-control" name="mobileNumber" minlength="10"
                        maxlength="12"
                        pattern="^(?:0|94|\+94|0094)?(?:(11|21|23|24|25|26|27|31|32|33|34|35|36|37|38|41|45|47|51|52|54|55|57|63|65|66|67|81|91)(0|2|3|4|5|7|9)|7(0|1|2|5|6|7|8)\d)\d{6}$"
@@ -48,11 +50,13 @@
                 <i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
             </div>
             <div class="form-wrapper">
+                <label>use at least one special characture, one uppercase and one lowercase letter,and one number</label>
                 <input type="password" placeholder="Password" class="form-control" name="password"
                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*[A-Z]).{8,}" required>
                 <i class="zmdi zmdi-lock"></i>
             </div>
             <div class="form-wrapper">
+
                 <input type="password" placeholder="Confirm Password" class="form-control" name="confirmPass"
                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*[A-Z]).{8,}" required>
                 <i class="zmdi zmdi-lock"></i>
